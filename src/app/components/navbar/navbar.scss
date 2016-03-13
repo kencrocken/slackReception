@@ -1,3 +1,24 @@
-.acme-navbar-text{
-  color: white;
+.navbar {
+    position : relative;
+}
+
+.site-branding {
+    background      : url('../assets/images/logo18.png') no-repeat center center;
+    background-size : cover;
+    height          : 100px;
+    width           : 100px;
+    border-radius   : 50%;
+    margin          : 0 auto;
+}
+
+.navbar-time {
+    position : absolute;
+    top      : 0;
+    right    : 25px;
+    li {
+        font-family : $base-font-family;
+        font-weight : 300;
+        font-size   : 25px;
+        color       : lighten($base-font-color, 15%);
+    }
 }

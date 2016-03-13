@@ -18,22 +18,28 @@ class MalarkeyDirective {
     function linkFunc(scope, el, attr, vm) {
       let watcher;
       let typist = malarkey(el[0], {
-        typeSpeed: 40,
-        deleteSpeed: 40,
-        pauseDelay: 800,
-        loop: true,
-        postfix: ' '
+        // typeSpeed: 40,
+        // deleteSpeed: 40,
+        // pauseDelay: 800,
+        // loop: true,
+        // postfix: ' '
+          typeSpeed: 50,
+          deleteSpeed: 50,
+          pauseDelay: 2000,
+          loop: false,
+          postfix: ''
       });
 
       el.addClass('acme-malarkey');
 
       angular.forEach(scope.extraValues, (value) => {
-        typist.type(value).pause().delete();
+        typist.type(value).pause();
       });
 
-      watcher = scope.$watch('vm.contributors', () => {
-        angular.forEach(vm.contributors, (contributor) => {
-          typist.type(contributor.login).pause().delete();
+      watcher = scope.$watch('vm.quotesArray', () => {
+        // console.log('Contributors', vm.quotesArray);
+        angular.forEach(vm.quotesArray, (quote) => {
+          typist.type(quote).pause();
         });
       });
 
@@ -46,28 +52,29 @@ class MalarkeyDirective {
 }
 
 class MalarkeyController {
-  constructor ($log, githubContributor) {
+  constructor ($log) {
     'ngInject';
 
     this.$log = $log;
     this.contributors = [];
-
-    this.activate(githubContributor);
+    this.quotesArray = ["Tell me and I forget. Teach me and I remember. Involve me and I learn"];
+    // this.activate(quotesArray);
   }
 
-  activate(githubContributor) {
-    return this.getContributors(githubContributor).then(() => {
-      this.$log.info('Activated Contributors View');
-    });
-  }
+  // activate(quotes) {
+  //   return this.getContributors(githubContributor).then(() => {
+  //       console.log(githubContributor);
+  //       this.$log.info('Activated Contributors View');
+  //   });
+  // }
 
-  getContributors(githubContributor) {
-    return githubContributor.getContributors(10).then((data) => {
-      this.contributors = data;
+  // getContributors(githubContributor) {
+  //   return githubContributor.getContributors(10).then((data) => {
+  //     this.contributors = data;
 
-      return this.contributors;
-    });
-  }
+  //     return this.contributors;
+  //   });
+  // }
 }
 
 export default MalarkeyDirective;

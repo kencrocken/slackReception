@@ -1,3 +1,5 @@
+$all-headings: h1,h2,h3,h4,h5,h6;
+
 body {
   color: $base-font-color;
   font-family: $base-font-family;
@@ -5,16 +7,17 @@ body {
   line-height: $base-line-height;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+#{$all-headings}{
   font-family: $heading-font-family;
   font-size: modular-scale(1);
   line-height: $heading-line-height;
   margin: 0 0 $small-spacing;
+}
+
+@for $i from 1 through length($all-headings) {
+    #{nth($all-headings, $i)} {
+        font-size: modular-scale(length($all-headings) - $i, $modular-scale-base/$golden, $golden);
+    }
 }
 
 p {
