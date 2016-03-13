@@ -1,5 +1,5 @@
 class SlackWebhookService{
-    constructor ($log, $http, $resource) {
+    constructor ($resource) {
         'ngInject';
 
         this.data = JSON.stringify({ text : 'There is a delivery.'});
