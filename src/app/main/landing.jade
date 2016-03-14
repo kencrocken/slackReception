@@ -4,6 +4,13 @@ div
         h1 Welcome!
 
     .call-to-action
-        a(ui-sref='home.delivery') Are you making a delivery?
+        a(ui-sref='home.delivery')
+            svg(role="img" class="icon")
+                use(xlink:href="#icon-transport")
+            span Have a delivery?
+
     .call-to-action
-        a(ui-sref='home.visiting') Here for a meeting or to meet someone?
+        a(ui-sref='home.visiting')
+            svg(role="img" class="icon")
+                use(xlink:href="#icon-business")
+            span  Meeting someone?

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Gulp SVG Symbols test page</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width" />
+    <style type="text/css">
+      html {
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        background: #ecf4f8;
+        text-align: center;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        margin: 0 0 1em;
+        padding: 1em;
+        background: white;
+      }
+      main {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      main::after {
+        content: '';
+        flex-grow: 100;
+      }
+      p {
+        margin: 0;
+        padding: 0 0 .5em;
+      }
+      .icon,
+      .icon-wrapper {
+        background: white;
+        margin: .5em;
+        padding: 1em;
+        border-radius: .5em;
+      }
+      .icon {
+        display: inline-block;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding-bottom: 0;
+        min-width: 8em;
+      }
+      .icon-wrapper {
+        background-color: #fafafa;
+        background-image: linear-gradient(45deg, #ccc 25%, transparent 25%, transparent 75%, #ccc 75%, #ccc),
+        linear-gradient(45deg, #ccc 25%, transparent 25%, transparent 75%, #ccc 75%, #ccc);
+        background-size:30px 30px;
+        background-position:0 0, 15px 15px;
+        margin: auto;
+      }
+      .icon-action {
+        margin: 1em -1em 0;
+        border-top: 1px solid #eee;
+        display: flex;
+      }
+      .icon-action > * {
+        flex-grow: 1;
+      }
+
+      button {
+        font: inherit;
+        background: none;
+        border: 0;
+        outline: 0;
+      }
+      button,
+      label {
+        padding: 1em .5em;
+        flex-basis: 50%;
+        cursor: pointer;
+      }
+      button:hover,
+      label:hover {
+        color: mediumVioletRed;
+      }
+      label {
+        border-left: 1px solid #eee;
+      }
+      input[type=checkbox] {
+        display: none;
+      }
+      /* can't display none: copy won't work */
+      pre {
+        text-align: left;
+        position: absolute;
+        opacity: 0;
+        z-index: 2;
+        padding: 1em;
+        pointer-events: none;
+        border-top: 1px solid #eee;
+        margin: 0 -1em;
+        width: 0;
+      }
+      input:checked ~ .icon-action label {
+        background: #eee;
+      }
+      input:checked ~ pre {
+        position: static;
+        pointer-events: auto;
+        opacity: 1;
+        width: 100%;
+      }
+    </style>
+    <style type="text/css">
+      .icon-business {
+        width: 1.882em;
+        height: 1.882em;
+      }
+      
+      .icon-transport {
+        width: 19.125em;
+        height: 19.125em;
+      }
+      
+      
+    </style>
+  </head>
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" style="width:0; height:0; visibility:hidden;">
+    <defs>
+      false
+    </defs>
+    
+    <symbol id="icon-business" viewBox="0 0 60.223 60.223">
+      <g fill="#010002"><path d="M59.535 24.683c-1.463-5.327-4.758-9.69-9.688-12.24a3.054 3.054 0 0 0-1.03-.316 7.704 7.704 0 0 0-2.972-.322c-2.757.237-4.938 1.544-5.872 3.36a6.2 6.2 0 0 0-.58.883c-1.84 3.267-5.55 6.146-8.8 8.22a3.228 3.228 0 0 0-.62-.18c-3.9-.717-7.27-2.41-9.432-5.836a3.006 3.006 0 0 0-1.082-1.04c-1.132-1.222-2.932-2.06-5.084-2.244a7.71 7.71 0 0 0-2.968.32 3.03 3.03 0 0 0-1.03.318C5.445 18.154 2.15 22.518.69 27.846c-1.02 3.717 4.615 5.828 5.642 2.09a17.92 17.92 0 0 1 1.395-3.58l-.18 9.364c0 .05.01.1.01.15l-.032 1.75-.366 8.728-.787 10.924c-.005.274.06.532.17.77l-.003.038c-.022 1.166 1.123 2.123 2.56 2.143 1.433.018 2.616-.912 2.64-2.075l1.534-14.362.267-2.13.634.01.74 8.52.506 7.395c-.006.32.083.622.236.897.246.94 1.262 1.653 2.498 1.668 1.436.018 2.616-.91 2.64-2.074l-.37-10.937-.03-8.734.028-1.45c.003-.046.013-.09.014-.135l.192-10.068c2.283 1.556 4.902 2.618 7.75 3.142a3.02 3.02 0 0 0 2.13-.363c.905.5 2.04.6 3.142-.086 1.925-1.195 4.06-2.593 5.982-4.2l.16 8.413c.002.045.012.09.015.134l.027 1.454-.028 8.73-.37 10.94c.023 1.164 1.204 2.095 2.64 2.074 1.236-.015 2.252-.73 2.5-1.67.15-.273.24-.576.234-.896l.506-7.396.74-8.52.635-.01.267 2.132 1.532 14.36c.023 1.164 1.205 2.093 2.64 2.076 1.438-.02 2.583-.98 2.56-2.142l-.004-.036c.112-.24.178-.5.172-.772l-.787-10.926-.367-8.73-.033-1.766c0-.045.01-.088.01-.133l-.18-9.365a18.01 18.01 0 0 1 1.396 3.583c1.026 3.74 6.662 1.628 5.642-2.09z"/><circle cx="46.08" cy="5.08" r="5.08"/><circle cx="14.15" cy="8.24" r="5.08"/></g>
+    </symbol>
+    <symbol id="icon-transport" viewBox="0 0 612 612">
+      <path d="M226.764 375.35c-28.25 0-51.078 22.91-51.078 51.16 0 28.166 22.83 51.078 51.078 51.078s51.078-22.912 51.078-51.078c0-28.25-22.83-51.16-51.078-51.16zm0 76.7c-14.125 0-25.54-11.5-25.54-25.542 0-14.123 11.415-25.54 25.54-25.54 14.124 0 25.54 11.417 25.54 25.54-.002 14.043-11.416 25.54-25.54 25.54zM612 337.56v54.542c0 13.605-11.03 24.635-24.636 24.635h-26.36c-4.763-32.684-32.93-57.812-66.927-57.812-33.914 0-62.082 25.13-66.845 57.812H293.625c-4.763-32.684-32.93-57.812-66.845-57.812s-62.082 25.13-66.844 57.812h-33.012c-13.606 0-24.635-11.03-24.635-24.635v-54.54H612zm-117.857 37.79c-28.25 0-51.16 22.91-51.16 51.16 0 28.166 22.912 51.078 51.16 51.078 28.166 0 51.077-22.912 51.077-51.078 0-28.25-22.91-51.16-51.077-51.16zm0 76.7c-14.125 0-25.54-11.5-25.54-25.542 0-14.123 11.415-25.54 25.54-25.54 14.042 0 25.54 11.417 25.54 25.54 0 14.043-11.498 25.54-25.54 25.54zm108.15-169.413l-96.817-95.75c-6.16-6.078-14.453-9.527-23.076-9.527h-48.86v-18.313c0-13.63-11.004-24.635-24.635-24.635H126.907c-13.55 0-24.635 11.005-24.635 24.635v3.86L2.3 174.43l177.146 23.067L0 215.323l178.814 25.423L0 256.25l102.278 19.29-.007 48.403h509.713v-17.985c0-8.787-3.53-17.162-9.69-23.32zm-42.21 3.202h-93.696a3.855 3.855 0 0 1-3.86-3.86v-72.347a3.856 3.856 0 0 1 3.86-3.86h17.82c.985 0 1.97.41 2.71 1.068l75.796 72.348c2.544 2.38.82 6.65-2.63 6.65z"/>
+    </symbol></svg>
+    <h1>Gulp SVG Symbols demo page</h1>
+    <main>
+      <div class="icon">
+        <p>#icon-business</p>
+        <div class="icon-wrapper">
+          <svg role="img" class="icon-business">
+            <use xlink:href="#icon-business"></use>
+          </svg>
+        </div>
+        <div class="icon-dev">
+          <input class="show-code" id="toggle-icon-business" type="checkbox" />
+          <div class="icon-action">
+            <button onclick="gulpSvgSymbol.copy('code-icon-business')">Copy</button>
+            <label onclick="gulpSvgSymbol.reflow('code-icon-business')" for="toggle-icon-business">Show</label>
+          </div>
+<pre>
+<code id="code-icon-business">&lt;svg role=&quot;img&quot; class=&quot;icon-business&quot;&gt;
+  &lt;use xlink:href=&quot;#icon-business&quot;&gt;&lt;/use&gt;
+&lt;/svg&gt;</code>
+</pre>
+        </div>
+      </div>
+      <div class="icon">
+        <p>#icon-transport</p>
+        <div class="icon-wrapper">
+          <svg role="img" class="icon-transport">
+            <use xlink:href="#icon-transport"></use>
+          </svg>
+        </div>
+        <div class="icon-dev">
+          <input class="show-code" id="toggle-icon-transport" type="checkbox" />
+          <div class="icon-action">
+            <button onclick="gulpSvgSymbol.copy('code-icon-transport')">Copy</button>
+            <label onclick="gulpSvgSymbol.reflow('code-icon-transport')" for="toggle-icon-transport">Show</label>
+          </div>
+<pre>
+<code id="code-icon-transport">&lt;svg role=&quot;img&quot; class=&quot;icon-transport&quot;&gt;
+  &lt;use xlink:href=&quot;#icon-transport&quot;&gt;&lt;/use&gt;
+&lt;/svg&gt;</code>
+</pre>
+        </div>
+      </div>
+    </main>
+    <script type="text/javascript">
+      (function () {
+        // https://developers.google.com/web/updates/2015/04/cut-and-copy-commands
+        var symb = window.gulpSvgSymbol = {};
+        var main = document.getElementsByTagName('main')[0];
+        symb.copy = function (id) {
+          window.getSelection().removeAllRanges();
+          var code = document.getElementById(id);
+          var range = document.createRange();
+          range.selectNode(code);
+          window.getSelection().addRange(range);
+          try {
+            var successful = document.execCommand('copy');
+            var msg = successful ? 'successful' : 'unsuccessful';
+          } catch(err) {
+            console.log('Oops, unable to copy');
+          }
+          window.getSelection().removeAllRanges();
+        }
+        // Force a reflow so sizes are back to initials…
+        symb.reflow = function (id) {
+          var code = document.getElementById(id);
+          code.style.display = 'none';
+          window.setTimeout(function () {
+            code.style.display = '';
+          }, 0);
+        }
+      }());
+    </script>
+  </body>
+</html>

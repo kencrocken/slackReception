@@ -19,7 +19,7 @@ function routerConfig ($stateProvider, $urlRouterProvider) {
     })
     .state('home.delivery', {
         url: '/delivery',
-        templateUrl: 'app/main/delivery.html',
+        templateUrl: 'app/components/delivery/delivery.html',
         controller: 'DeliveryController',
         controllerAs: 'delivery'
     });
